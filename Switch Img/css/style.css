@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.silder-container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.left-side{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    transition: transform .5s ease-in-out;
+}
+.left-side >div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+}
+.left-side >div >h1{
+    color:rgb(240, 25, 72);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.right-side{
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 70%;
+    height: 100%;
+    background-color: green;
+    transition: transform .5s ease-in-out;
+}
+
+.right-side >div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+button{
+    background-color: #fff;
+    border: none;
+    color: rgb(240, 25, 72);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 12px;
+   border-radius: 2px;
+}
+button:hover{
+    background-color: rgb(240, 25, 72);
+    color: #fff;
+    transition: .3s ease;
+}
+button:focus{
+    outline: none;
+}
+
+.btn-action button{
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    z-index: 99;
+}
+
+.btn-action .down-btn{
+    transform: translateX(-100%);
+}
+.btn-action .up-btn{
+    transform: translateY(-100%);
+}
